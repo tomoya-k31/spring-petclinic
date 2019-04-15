@@ -36,9 +36,13 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.withType(Javaimplementation) {
+tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
     // options.compilerArgs += ["-Xlint:unchecked", "-Xlint:deprecation"]
+}
+
+springBoot {
+    mainClassName = 'org.springframework.samples.petclinic.PetClinicApplication'
 }
 
 wrapper {
