@@ -6,7 +6,6 @@ target/*
 .project
 .factorypath
 .attach_pid*
-.idea
 *.iml
 /target
 .sts4-cache/
@@ -16,3 +15,18 @@ target/*
 !.vscode/launch.json
 !.vscode/extensions.json
 _site/
+
+# IDEA
+**/.idea/*
+!.idea/codeStyleSettings.xml
+!.idea/gradle.xml
+!.idea/vcs.xml
+!.idea/dataSources.xml
+!.idea/dataSources.local.xml
+!.idea/findbugs-idea.xml
+!.idea/checkstyle-idea.xml
+!.idea/modules.xml
+!.idea/modules/
+!.idea/inspectionProfiles/
+!.idea/runConfigurations/
+out/*

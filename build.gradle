@@ -15,8 +15,8 @@ repositories {
 group = 'org.springframework.samples'
 version = '2.1.0.BUILD-SNAPSHOT'
 description = 'petclinic'
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
