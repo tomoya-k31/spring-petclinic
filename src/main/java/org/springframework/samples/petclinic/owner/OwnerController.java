@@ -38,9 +38,7 @@ import java.util.Map;
 @Controller
 class OwnerController {
 
-    private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
     private final OwnerRepository owners;
-
 
     public OwnerController(OwnerRepository clinicService) {
         this.owners = clinicService;
@@ -55,13 +53,13 @@ class OwnerController {
     public String initCreationForm(Map<String, Object> model) {
         Owner owner = new Owner();
         model.put("owner", owner);
-        return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+        return "owners/createOrUpdateOwnerForm";
     }
 
     @PostMapping("/owners/new")
     public String processCreationForm(@Valid Owner owner, BindingResult result) {
         if (result.hasErrors()) {
-            return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+            return "owners/createOrUpdateOwnerForm";
         } else {
             this.owners.save(owner);
             return "redirect:/owners/" + owner.getId();
@@ -103,13 +101,13 @@ class OwnerController {
     public String initUpdateOwnerForm(@PathVariable("ownerId") int ownerId, Model model) {
         Owner owner = this.owners.findById(ownerId);
         model.addAttribute(owner);
-        return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+        return "owners/createOrUpdateOwnerForm";
     }
 
     @PostMapping("/owners/{ownerId}/edit")
     public String processUpdateOwnerForm(@Valid Owner owner, BindingResult result, @PathVariable("ownerId") int ownerId) {
         if (result.hasErrors()) {
-            return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
+            return "owners/createOrUpdateOwnerForm";
         } else {
             owner.setId(ownerId);
             this.owners.save(owner);
