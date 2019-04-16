@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PetClinicApplication MySQL" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="org.springframework.samples.spring-petclinic.main" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="org.springframework.samples.petclinic.PetClinicApplication" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=mysql" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
